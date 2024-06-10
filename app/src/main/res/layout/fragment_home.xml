@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment" >
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Fast Pass Tickets"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="30sp"
+        android:textColor="@color/text_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/welcome"
+        app:layout_constraintEnd_toEndOf="@id/welcome"
+        app:layout_constraintTop_toBottomOf="@id/welcome"
+        android:textColor="@color/text_color"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:textSize="24sp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/entrance_card"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/time"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="35dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/cards_background"
+        android:outlineSpotShadowColor="@color/cards">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/entrance_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/gate"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:cardCornerRadius="50dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/entrance_parent"
+                app:layout_constraintEnd_toEndOf="@id/entrance_parent"
+                app:layout_constraintTop_toTopOf="@id/entrance_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/entrance_picture"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintStart_toStartOf="@id/gate"
+                    app:layout_constraintEnd_toEndOf="@id/gate"
+                    app:layout_constraintTop_toTopOf="@id/gate"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/gate"
+
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/entrance_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entrance Tickets"
+                android:textSize="20sp"
+                android:textColor="@color/text_color"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/gate"
+                app:layout_constraintEnd_toEndOf="@id/gate"
+                app:layout_constraintTop_toTopOf="@id/gate"
+                android:layout_marginTop="80dp"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/swing_card"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:layout_constraintStart_toEndOf="@id/entrance_card"
+        app:layout_constraintTop_toBottomOf="@id/time"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="35dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/cards_background"
+        android:outlineSpotShadowColor="@color/cards">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/swing_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/swing"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:cardCornerRadius="50dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/swing_parent"
+                app:layout_constraintEnd_toEndOf="@id/swing_parent"
+                app:layout_constraintTop_toTopOf="@id/swing_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/swing_picture"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintStart_toStartOf="@id/gate"
+                    app:layout_constraintEnd_toEndOf="@id/gate"
+                    app:layout_constraintTop_toTopOf="@id/gate"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/swing"
+
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/swing_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Swings Tickets"
+                android:textSize="20sp"
+                android:textColor="@color/text_color"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/swing"
+                app:layout_constraintEnd_toEndOf="@id/swing"
+                app:layout_constraintTop_toTopOf="@id/swing"
+                android:layout_marginTop="80dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ticket_card"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/entrance_card"
+        app:layout_constraintTop_toBottomOf="@id/entrance_card"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="35dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/cards_background"
+        android:outlineSpotShadowColor="@color/cards">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ticket_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ticket"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:cardCornerRadius="50dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/ticket_parent"
+                app:layout_constraintEnd_toEndOf="@id/ticket_parent"
+                app:layout_constraintTop_toTopOf="@id/ticket_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/ticket_picture"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintStart_toStartOf="@id/gate"
+                    app:layout_constraintEnd_toEndOf="@id/gate"
+                    app:layout_constraintTop_toTopOf="@id/gate"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/tickets"
+
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/ticket_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Tickets"
+                android:textSize="20sp"
+                android:textColor="@color/text_color"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/ticket"
+                app:layout_constraintEnd_toEndOf="@id/ticket"
+                app:layout_constraintTop_toTopOf="@id/ticket"
+                android:layout_marginTop="80dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/package_card"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:layout_constraintStart_toEndOf="@id/ticket_card"
+        app:layout_constraintTop_toBottomOf="@id/swing_card"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="35dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/cards_background"
+        android:outlineSpotShadowColor="@color/cards">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/package_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/packages"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:cardCornerRadius="50dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/package_parent"
+                app:layout_constraintEnd_toEndOf="@id/package_parent"
+                app:layout_constraintTop_toTopOf="@id/package_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/package_picture"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintStart_toStartOf="@id/gate"
+                    app:layout_constraintEnd_toEndOf="@id/gate"
+                    app:layout_constraintTop_toTopOf="@id/gate"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/offer"
+
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/package_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Special Packages"
+                android:textSize="20sp"
+                android:textColor="@color/text_color"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/packages"
+                app:layout_constraintEnd_toEndOf="@id/packages"
+                app:layout_constraintTop_toTopOf="@id/packages"
+                android:layout_marginTop="80dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
